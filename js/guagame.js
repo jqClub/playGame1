@@ -1,3 +1,4 @@
+//這里是一个类，返回的是game的实例对象
 var GuaGame = function(fps, images, runCallback) {
     // images 是一个对象， 里面是图片 的引用名字和图片的路径
     // 程序会在所有图片载入成功之后才开始运行
@@ -28,7 +29,7 @@ var GuaGame = function(fps, images, runCallback) {
     // timer
     window.fps = 30
     var runloop = function() {
-        log(window.fps)
+//      log(window.fps)
         // events
         var actions = Object.keys(g.actions)
         for (var i = 0; i < actions.length; i++) {

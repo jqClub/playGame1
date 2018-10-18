@@ -1,6 +1,9 @@
+//挡板的逻辑
 var Paddle = function(game) {
     // var path = 'paddle.png'
     // var image = imageFrompath(path)
+    
+    //返回一个实例对象
     var o = game.imageByName('paddle')
     // var o = {
     //     image: image,

@@ -1,7 +1,15 @@
 var loadLevel = function(game, n) {
     n = n - 1
     var level = levels[n]
+    
+    //如果没有关卡内容，直接取第一个数据
+    if(!level) {
+    	log('没有关卡数据')
+    	return []
+    }
+    
     var blocks = []
+//  log(9999, levels, level)
     for (var i = 0; i < level.length; i++) {
         var p = level[i]
         var b = Block(game, p)
@@ -40,12 +48,12 @@ var enableDebugMode = function(game, enable) {
 
 var __main = function() {
     // enableDebugMode(true)
-
     var iamges = {
         ball: 'img/ball.png',
         block: 'img/block.png',
         paddle: 'img/paddle.png',
     }
+    
     var game = GuaGame(30, iamges, function(g) {
 
             var paddle = Paddle(game)
@@ -101,7 +109,7 @@ var __main = function() {
                     }
                 }
                 // draw labels
-                // MDN canvas text
+                // MDN canvas text(写分数再页面中)
                 game.context.fillText('分数：' + score, 10, 290)
             }
     })
