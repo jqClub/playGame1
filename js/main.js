@@ -42,9 +42,9 @@ var __main = function() {
     // enableDebugMode(true)
 
     var iamges = {
-        ball: 'ball.png',
-        block: 'block.png',
-        paddle: 'paddle.png',
+        ball: 'img/ball.png',
+        block: 'img/block.png',
+        paddle: 'img/paddle.png',
     }
     var game = GuaGame(30, iamges, function(g) {
 
